@@ -2,11 +2,17 @@
 
 This is Gin Middleware that aim to extract json tag and than store it to `FieldError.Field()` object.
 
+## Install
+
+`go get -u github.com/ad3n/json-validator`
+
 ## Example
 
 - Register Middleware
 
 ```go
+import "github.com/ad3n/json-validator"
+
 engine := gin.New()
 engine.Use(validator.RegisterJsonTag())
 ```
