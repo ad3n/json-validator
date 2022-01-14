@@ -11,15 +11,17 @@ This is Gin Middleware that aim to extract json tag and than store it to `FieldE
 - Register Middleware
 
 ```go
-import "github.com/ad3n/json-validator"
+import jsonvalidator "github.com/ad3n/json-validator"
 
 engine := gin.New()
-engine.Use(validator.RegisterJsonTag())
+engine.Use(jsonvalidator.RegisterJsonTag())
 ```
 
 - In Your Controller
 
 ```go
+import "github.com/go-playground/validator/v10"
+
 err := c.ShouldBind(&q)
 if err != nil {
     verr, ok := err.(validator.ValidationErrors)
