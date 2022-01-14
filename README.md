@@ -32,3 +32,7 @@ if err != nil {
     }
 }
 ```
+
+## Credit
+
+Original discussion: [go-playground/validator#258](https://github.com/go-playground/validator/issues/258)
